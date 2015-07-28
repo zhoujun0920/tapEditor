@@ -13,6 +13,8 @@
 		5A6CD62F1B6177D500F3E3BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD62E1B6177D500F3E3BD /* Images.xcassets */; };
 		5A6CD6321B6177D500F3E3BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD6301B6177D500F3E3BD /* LaunchScreen.xib */; };
 		5A6CD63E1B6177D500F3E3BD /* tapEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD63D1B6177D500F3E3BD /* tapEditorTests.swift */; };
+		5A6CD6E91B6723E200F3E3BD /* RAReorderableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD6E81B6723E200F3E3BD /* RAReorderableLayout.swift */; };
+		5A6CD6EB1B67432600F3E3BD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD6EA1B67432600F3E3BD /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		5A6CD6371B6177D500F3E3BD /* tapEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tapEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A6CD63C1B6177D500F3E3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A6CD63D1B6177D500F3E3BD /* tapEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tapEditorTests.swift; sourceTree = "<group>"; };
+		5A6CD6E81B6723E200F3E3BD /* RAReorderableLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAReorderableLayout.swift; sourceTree = "<group>"; };
+		5A6CD6EA1B67432600F3E3BD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		5A6CD6241B6177D500F3E3BD /* tapEditor */ = {
 			isa = PBXGroup;
 			children = (
+				5A6CD6E81B6723E200F3E3BD /* RAReorderableLayout.swift */,
 				5A6CD6271B6177D500F3E3BD /* AppDelegate.swift */,
 				5A6CD6291B6177D500F3E3BD /* ViewController.swift */,
 				5A6CD62B1B6177D500F3E3BD /* Main.storyboard */,
@@ -90,6 +95,7 @@
 		5A6CD6251B6177D500F3E3BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A6CD6EA1B67432600F3E3BD /* background.png */,
 				5A6CD6261B6177D500F3E3BD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6CD62D1B6177D500F3E3BD /* Main.storyboard in Resources */,
+				5A6CD6EB1B67432600F3E3BD /* background.png in Resources */,
 				5A6CD6321B6177D500F3E3BD /* LaunchScreen.xib in Resources */,
 				5A6CD62F1B6177D500F3E3BD /* Images.xcassets in Resources */,
 			);
@@ -214,6 +221,7 @@
 			files = (
 				5A6CD62A1B6177D500F3E3BD /* ViewController.swift in Sources */,
 				5A6CD6281B6177D500F3E3BD /* AppDelegate.swift in Sources */,
+				5A6CD6E91B6723E200F3E3BD /* RAReorderableLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +419,7 @@
 				5A6CD6431B6177D500F3E3BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A6CD6441B6177D500F3E3BD /* Build configuration list for PBXNativeTarget "tapEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				5A6CD6461B6177D500F3E3BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
