@@ -15,6 +15,8 @@
 		5A6CD63E1B6177D500F3E3BD /* tapEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD63D1B6177D500F3E3BD /* tapEditorTests.swift */; };
 		5A6CD6E91B6723E200F3E3BD /* RAReorderableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD6E81B6723E200F3E3BD /* RAReorderableLayout.swift */; };
 		5A6CD6EB1B67432600F3E3BD /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6CD6EA1B67432600F3E3BD /* background.png */; };
+		5A6CD6EF1B68089100F3E3BD /* tabPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD6EE1B68089100F3E3BD /* tabPicker.swift */; };
+		5A6CD6F11B6818F000F3E3BD /* tabPickerViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6CD6F01B6818F000F3E3BD /* tabPickerViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		5A6CD63D1B6177D500F3E3BD /* tapEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tapEditorTests.swift; sourceTree = "<group>"; };
 		5A6CD6E81B6723E200F3E3BD /* RAReorderableLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAReorderableLayout.swift; sourceTree = "<group>"; };
 		5A6CD6EA1B67432600F3E3BD /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		5A6CD6EE1B68089100F3E3BD /* tabPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabPicker.swift; sourceTree = "<group>"; };
+		5A6CD6F01B6818F000F3E3BD /* tabPickerViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabPickerViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		5A6CD6241B6177D500F3E3BD /* tapEditor */ = {
 			isa = PBXGroup;
 			children = (
+				5A6CD6EE1B68089100F3E3BD /* tabPicker.swift */,
+				5A6CD6F01B6818F000F3E3BD /* tabPickerViewViewController.swift */,
 				5A6CD6E81B6723E200F3E3BD /* RAReorderableLayout.swift */,
 				5A6CD6271B6177D500F3E3BD /* AppDelegate.swift */,
 				5A6CD6291B6177D500F3E3BD /* ViewController.swift */,
@@ -222,6 +228,8 @@
 				5A6CD62A1B6177D500F3E3BD /* ViewController.swift in Sources */,
 				5A6CD6281B6177D500F3E3BD /* AppDelegate.swift in Sources */,
 				5A6CD6E91B6723E200F3E3BD /* RAReorderableLayout.swift in Sources */,
+				5A6CD6EF1B68089100F3E3BD /* tabPicker.swift in Sources */,
+				5A6CD6F11B6818F000F3E3BD /* tabPickerViewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tapEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -361,6 +370,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tapEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

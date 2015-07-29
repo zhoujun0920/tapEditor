@@ -105,6 +105,8 @@ class RACollectionViewCell: UICollectionViewCell {
     var button: UIButton!
     var gradientLayer: CAGradientLayer?
     var hilightedCover: UIView!
+    
+   
     override var highlighted: Bool {
         didSet {
             self.hilightedCover.hidden = !self.highlighted
@@ -132,6 +134,9 @@ class RACollectionViewCell: UICollectionViewCell {
         self.button = UIButton()
         self.button.autoresizingMask = .FlexibleWidth | .FlexibleHeight
         self.button.contentMode = UIViewContentMode.ScaleAspectFill
+        self.button.addTarget(self, action: "pressButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.button.addTarget(self, action: "changeButtonColor:", forControlEvents: UIControlEvents.TouchDown)
+        self.button.addTarget(self, action: "rechangeButtonColor:", forControlEvents: UIControlEvents.TouchUpInside)
         self.addSubview(self.button)
         
         self.imageView = UIImageView()
@@ -160,5 +165,32 @@ class RACollectionViewCell: UICollectionViewCell {
         self.gradientLayer!.locations = [0, 1]
         
         gradientView.layer.addSublayer(self.gradientLayer)
+    }
+    
+    func pressButton(sender: UIButton) {
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let viewController = storyboard.instantiateViewControllerWithIdentifier("viewController") as! ViewController
+        let tabPickerView = storyboard.instantiateViewControllerWithIdentifier("tabPicker") as! tabPickerViewViewController
+        var viewController = window?.rootViewController
+        viewController!.presentViewController(tabPickerView, animated: true, completion: nil)
+        println("Press Button")
+//        tabPickerView.transitioningDelegate = self
+//        presentViewController(tabPickerView, animated: true, completion: nil)
+//
+        
+    }
+    
+    func changeButtonColor(sender: UIButton) {
+        UIView.animateWithDuration(0.15, animations: {
+            sender.backgroundColor = UIColor.blackColor()
+            sender.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        })
+    }
+    
+    func rechangeButtonColor(sender:UIButton) {
+        UIView.animateWithDuration(0.15, animations: {
+            sender.backgroundColor = UIColor.whiteColor()
+            sender.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        })
     }
 }

@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tapEditor" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewController" id="BYZ-38-t0r" customClass="ViewController" customModule="tapEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -77,6 +77,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="368"/>
+        </scene>
+        <!--Tab Picker View View Controller-->
+        <scene sceneID="vdB-Xf-01I">
+            <objects>
+                <viewController storyboardIdentifier="tabPicker" id="47j-sO-wFM" customClass="tabPickerViewViewController" customModule="tapEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tPg-R9-zij"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVR-zv-3os"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HsP-VL-1mp" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkj-c9-cj7">
+                                <rect key="frame" x="16" y="57" width="288" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="47j-sO-wFM" id="asL-s4-JhP"/>
+                                    <outlet property="delegate" destination="47j-sO-wFM" id="xBE-v6-Dpk"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-e0-5P2">
+                                <rect key="frame" x="16" y="348" width="288" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="47j-sO-wFM" id="Lat-29-gJl"/>
+                                    <outlet property="delegate" destination="47j-sO-wFM" id="WoW-mp-v83"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exist Tab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-Fy-PRe">
+                                <rect key="frame" x="16" y="28" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="input name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0d-AD-0qC">
+                                <rect key="frame" x="112" y="310" width="96" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldBeginEditing:" destination="47j-sO-wFM" eventType="editingDidBegin" id="1nv-qK-Nle"/>
+                                    <action selector="textFieldDoneEditing:" destination="47j-sO-wFM" eventType="editingDidEndOnExit" id="u9V-fS-f8j"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWK-8V-Rw4">
+                                <rect key="frame" x="61" y="518" width="34" height="30"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="47j-sO-wFM" eventType="touchUpInside" id="hAC-RQ-PIv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGI-DE-rtK">
+                                <rect key="frame" x="211" y="518" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="47j-sO-wFM" eventType="touchUpInside" id="l0T-ww-Wrd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0u-YY-1Pl">
+                                <rect key="frame" x="130" y="227" width="60" height="30"/>
+                                <state key="normal" title="Modified">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="modifyButton:" destination="47j-sO-wFM" eventType="touchUpInside" id="StZ-yv-4zL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Tab" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpp-bQ-qR5">
+                                <rect key="frame" x="16" y="273" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hnw-e0-5P2" secondAttribute="trailing" id="1CB-RO-VrW"/>
+                            <constraint firstItem="Kpp-bQ-qR5" firstAttribute="trailing" secondItem="HsP-VL-1mp" secondAttribute="trailingMargin" id="34o-cq-yle"/>
+                            <constraint firstItem="xVR-zv-3os" firstAttribute="top" secondItem="yWK-8V-Rw4" secondAttribute="bottom" constant="20" id="3fM-vJ-1da"/>
+                            <constraint firstItem="ggP-Fy-PRe" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" id="AIy-bn-92p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b0u-YY-1Pl" secondAttribute="trailing" constant="114" id="Clu-Id-Ysi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O0d-AD-0qC" secondAttribute="trailing" constant="96" id="Epg-eY-GxM"/>
+                            <constraint firstItem="hnw-e0-5P2" firstAttribute="top" secondItem="O0d-AD-0qC" secondAttribute="bottom" constant="8" id="FnG-Yg-FUQ"/>
+                            <constraint firstItem="ggP-Fy-PRe" firstAttribute="top" secondItem="tPg-R9-zij" secondAttribute="bottom" constant="8" id="KgI-4g-OlT"/>
+                            <constraint firstItem="b0u-YY-1Pl" firstAttribute="top" secondItem="bkj-c9-cj7" secondAttribute="bottom" constant="8" id="PBo-RF-kZt"/>
+                            <constraint firstItem="Kpp-bQ-qR5" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" id="SIn-s5-oJt"/>
+                            <constraint firstItem="Kpp-bQ-qR5" firstAttribute="top" secondItem="b0u-YY-1Pl" secondAttribute="bottom" constant="16" id="VjN-JJ-3Of"/>
+                            <constraint firstItem="hnw-e0-5P2" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" id="aoc-lt-epJ"/>
+                            <constraint firstItem="O0d-AD-0qC" firstAttribute="top" secondItem="Kpp-bQ-qR5" secondAttribute="bottom" constant="16" id="cdJ-B9-F29"/>
+                            <constraint firstItem="bkj-c9-cj7" firstAttribute="top" secondItem="ggP-Fy-PRe" secondAttribute="bottom" constant="8" id="dBX-dM-foa"/>
+                            <constraint firstItem="bkj-c9-cj7" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" id="ggv-bD-so5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bkj-c9-cj7" secondAttribute="trailing" id="lQq-mD-Aoc"/>
+                            <constraint firstItem="yWK-8V-Rw4" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" constant="45" id="mQw-k6-Ww2"/>
+                            <constraint firstItem="ggP-Fy-PRe" firstAttribute="trailing" secondItem="HsP-VL-1mp" secondAttribute="trailingMargin" id="qim-bk-dWD"/>
+                            <constraint firstItem="xVR-zv-3os" firstAttribute="top" secondItem="wGI-DE-rtK" secondAttribute="bottom" constant="20" id="rdn-go-T6Q"/>
+                            <constraint firstItem="b0u-YY-1Pl" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" constant="114" id="uaX-2G-Hj2"/>
+                            <constraint firstItem="O0d-AD-0qC" firstAttribute="leading" secondItem="HsP-VL-1mp" secondAttribute="leadingMargin" constant="96" id="wCi-V9-W8K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wGI-DE-rtK" secondAttribute="trailing" constant="45" id="wWv-ou-iRH"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="47j-sO-wFM" eventType="touchDown" id="wtI-NR-G8j"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="existTabPicker" destination="bkj-c9-cj7" id="Ces-6W-eJB"/>
+                        <outlet property="mainView" destination="HsP-VL-1mp" id="Es0-bG-Loy"/>
+                        <outlet property="nameField" destination="O0d-AD-0qC" id="lVu-6V-M3G"/>
+                        <outlet property="newTabPicker" destination="hnw-e0-5P2" id="lKq-SQ-XA7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P98-iD-F0D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570" y="368"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
